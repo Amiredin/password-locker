@@ -12,11 +12,3 @@ class User:
         self.user_name = user_name
         self.password = password
         self.confirm_password = confirm_password
-
-  def save_detail(self):
-
-        '''
-        save_contact method saves contact objects into contact_list
-        '''
-
-        User.user_detail.append(self)
