@@ -28,4 +28,34 @@ class TestContact(unittest.TestCase):
 
 
 
-    
+    def test_save_multiple_detail(self):
+
+        """
+        a method to check if we can save multiple user details to our details array
+        """
+
+        self.new_user.save_detail()
+        test_user = User("Test","user","123456","123456")
+        test_user.save_detail()
+        self.assertEqual(len(User.user_detail),3)
+
+    def test_delete_user(self):
+            '''
+            test_delete_user to test if we can remove a user from our user list
+            '''
+            self.new_user.save_detail()
+            test_user = User("Test","user","0712345678","test@user.com") # new contact
+            test_user.save_detail()
+
+            self.new_user.delete_user()# Deleting a contact object
+            self.assertEqual(len(User.user_detail),1)
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()
