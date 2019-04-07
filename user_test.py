@@ -52,6 +52,13 @@ class TestContact(unittest.TestCase):
 
 
 
+    def test_display_all_details(self):
+
+        """
+        is a method that returns a list of all details saved
+        """
+
+        self.assertEqual(User.display_all_details(),User.user_detail)
 
 
 
