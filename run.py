@@ -41,9 +41,9 @@ def create_new_credential(account_name, account_password):
     return new_credential
 
 
-def save_new_credential(credentials):
+def save_new_credential(credential):
     """Function to save the newly created account and password"""
-    credentials.save_credentials()
+    credential.save_credential
 
 
 def find_credential(account_name):
@@ -51,21 +51,21 @@ def find_credential(account_name):
     return Credential.find_by_name(account_name)
 
 
-def check_existing_credentials(name):
+def check_existing_credential(name):
     """Method that checks whether a particular account and its credentials exist based on searched account_name"""
     return Credential.find_by_name(name)
 
 
-def display_credentials():
+def display_credential():
     """Function which displays all saved credentials"""
     return Credential.display_credential()
 
 
-def delete_credential(credentials):
+def delete_credential(credential):
     """
     Method that deletes credentials
     """
-    return Credential.delete_credential(credentials)
+    return Credential.delete_credential(credential)
 
 
 
@@ -81,7 +81,8 @@ def main():
         print('\n')
 
         if short_code == 'cu':
-           
+        
+
             print("Create a UserName")
             created_user_name = input()
 
@@ -137,7 +138,7 @@ def main():
                                 account_name = input()
                                 print("Enter a password")
                                 print(
-                                    "To generate random password enter keyword 'gp' or 'n' to create your own password")
+                                    "To generate  password enter keyword 'n' to create your own password")
                                 keyword = input().lower()
                                 if keyword == 'gp':
                                     
@@ -161,9 +162,9 @@ def main():
                     elif option == '1':
                         while True:
                             print("Below is a list of all your credentials")
-                            if display_credentials():
+                            if display_credential():
 
-                                for credential in display_credentials():
+                                for credential in display_credential():
                                     print(f"ACCOUNT NAME:{credential.account_name}")
                                     print(f"PASSWORD:{credential.account_password}")
 
@@ -198,7 +199,7 @@ def main():
 
                             search_name = input()
 
-                            if check_existing_credentials(search_name):
+                            if check_existing_credential(search_name):
                                 search_credential = find_credential(search_name)
                                 print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
                                 print("Delete? y/n")
@@ -223,7 +224,7 @@ def main():
 
                                 search_name = input()
 
-                                if check_existing_credentials(search_name):
+                                if check_existing_credential(search_name):
                                     search_credential = find_credential(search_name)
                                     print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
                                 else:
@@ -280,7 +281,7 @@ def main():
                             account_name = input()
                             print("Enter a password")
                             print(
-                                "To generate random password enter keyword 'gp' or 'n' to create your own password")
+                                "To generate  password enter keyword  'n' to create your own password")
                             keyword = input().lower()
                             if keyword == 'gp':
                               
@@ -304,9 +305,9 @@ def main():
                 elif option == '1':
                     while True:
                         print("Below is a list of all your credentials")
-                        if display_credentials():
+                        if display_credential():
 
-                            for credential in display_credentials():
+                            for credential in display_credential():
                                 print(f"ACCOUNT NAME:{credential.account_name}")
                                 print(f"PASSWORD:{credential.account_password}")
 
@@ -344,7 +345,7 @@ def main():
 
                         search_name = input()
 
-                        if check_existing_credentials(search_name):
+                        if check_existing_credential(search_name):
                             search_credential = find_credential(search_name)
                             print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
                             print("Delete? y/n")
@@ -369,7 +370,7 @@ def main():
 
                             search_name = input()
 
-                            if check_existing_credentials(search_name):
+                            if check_existing_credential(search_name):
                                 search_credential = find_credential(search_name)
                                 print(f"ACCOUNT NAME: {search_credential.account_name} \n PASSWORD: {search_credential.account_password}")
                             else:
