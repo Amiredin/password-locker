@@ -39,7 +39,7 @@ An application that allows us to generate and store passwords for various accoun
 * From the terminal navigate to the cloned project folder.
 
 * Open terminal and go to the project folder, run $ 
-./run.py
+python3.6 run.py
 
 ## contact
 Email : amiredin@yahoo.com
