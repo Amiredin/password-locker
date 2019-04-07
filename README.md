@@ -17,7 +17,7 @@ An application that allows us to generate and store passwords for various accoun
 |---|---|---|
 | create user account | username : Amiredin <br> password :123456 | congratulation you have created your new account |
 | user login | username : Amiredin <br> password : 123456 | welcome to your account |
-| Add credetials | username : Amiredin <br> password : 123456 | |---| ---|---|This are your credential |
+| Add credetials | username : Amiredin <br> password : 123456 | This are your credential |
 | generate password | type gp or n | if gp  : create random password <br> if n : create ypur own account|
 | Exit application | type ex | you have succesfully loged out your account |
 
