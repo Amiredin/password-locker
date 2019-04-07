@@ -2,14 +2,14 @@ from user import User
 from credential import Credential
 
 
-def create_account (account_name,user_name,password,confirm_password):
+def create_account (user_name,user_password,confirmpassword):
 
-    
+
     """
     function to create a new account
     """
 
-    new_user = User(account_name,user_name,password,confirm_password)
+    new_user = User(user_name,user_password,confirmpassword)
 
     return new_user
 

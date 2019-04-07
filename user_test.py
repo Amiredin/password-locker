@@ -13,7 +13,7 @@ class TestContact(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("facebook", "amiredin" ,"123456", "123456") # create contact object
+        self.new_user = User( "amiredin" ,"123456", "123456") # create contact object
 
 
     def test_init(self):
@@ -21,7 +21,7 @@ class TestContact(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.account_name,"facebook")
+        
         self.assertEqual(self.new_user.user_name,"amiredin")
         self.assertEqual(self.new_user.password,"123456")
         self.assertEqual(self.new_user.confirm_password,"123456")
@@ -35,7 +35,7 @@ class TestContact(unittest.TestCase):
         """
 
         self.new_user.save_detail()
-        test_user = User("Test","user","123456","123456")
+        test_user = User("user","123456","123456")
         test_user.save_detail()
         self.assertEqual(len(User.user_detail),3)
 
@@ -44,7 +44,7 @@ class TestContact(unittest.TestCase):
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_user.save_detail()
-            test_user = User("Test","user","0712345678","test@user.com") # new contact
+            test_user = User("user","0712345678","test@user.com") # new contact
             test_user.save_detail()
 
             self.new_user.delete_user()# Deleting a contact object
