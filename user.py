@@ -13,6 +13,8 @@ class User:
         self.password = password
         self.confirm_password = confirm_password
 
+
+
   def save_detail(self):
 
         '''
